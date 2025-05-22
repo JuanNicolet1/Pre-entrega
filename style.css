@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #1e1e2f;
+    /* background-image: url(libreria.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(150, 58, 20);
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    img {
+        width: 100px;
+        height: auto;
+        padding: 0;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+}
+
+.logo-nombre{
+        img {
+        width: 100px;
+        height: auto;
+        padding: 0;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+}
+
+.carrit{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.imagen-carrito {
+        width: 40px;
+        height: auto;
+}
+
+.imagen-ovalo {
+        width: 10px;
+        height: auto;
+    }
+
+
+.catalogo {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+h2{
+    color: aliceblue;
+    padding: 10px;
+}
+
+.main-container{
+    .item1{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-left: 150px;
+
+          .libro{
+            background-color: rgba(157, 87, 29, 0.92);
+            width: 151px;
+            transition: transform 0.3s ease;
+
+            img{
+                width: 140px;
+                height: 180px;
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+
+            .text{
+                margin-left: 12px;
+                margin-bottom: 4px;
+                align-items: center;
+            }
+          }
+          .libro:hover{
+            transform: scale(1.1); 
+            }
+    }
+
+     .formulario{
+            display: flex;
+            background-color: #4d2809;
+            font-size: 16px;
+            justify-content: center;
+            align-items: flex-start;
+
+            .leyenda{
+                padding-bottom: 3px;
+            }
+        }
+}
+
+footer{
+        background-color: rgb(150, 58, 20);
+        .footer-container{
+            text-align: center;
+        }
+}
+
+@media screen and (max-width:1024px) {
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+        header {
+            font-size: 1.25em;
+        
+            img {
+                display: flex;
+            }
+        }
+
+        .catalogo{
+            ul{
+            gap: 15px;
+            }
+        }
+        
+        .main-container {
+            .item1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+              }
+        }      
+    }
+
+
+@media screen and (max-width: 500px) {
+
+    .catalogo{
+        ul{
+            gap: 5px;
+        }
+        }
+
+    .main-container {
+            .item1 {
+                display: grid;
+                grid-template-columns: 1fr;
+              }
+        }
+}
